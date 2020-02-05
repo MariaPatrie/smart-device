@@ -1,0 +1,31 @@
+.button {
+  display: block;
+  width: 260px;
+  min-height: 52px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 15px;
+  border: 2px solid $color-text;
+
+  font-family: $font-text;
+  @include font (17px, 20px);
+  color: $color-text;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-text;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+}
+
+.button-submit {
+  padding-top: 0;
+  background-color: $color-white;
+}

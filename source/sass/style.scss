@@ -1,3 +1,7 @@
-h1 {
-  color: red;
-}
+@import "mixins_variables.scss";
+//
+@import "base/normalize.scss";
+@import "base/base.scss";
+@import "base/buttons.scss";
+@import "base/fonts.scss";
+//

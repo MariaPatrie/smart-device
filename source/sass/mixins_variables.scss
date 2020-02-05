@@ -1,0 +1,76 @@
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$mobile-width-only: 767px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$font-text: "Open-sans", "Arial", sans-serif;
+
+$color-white: #ffffff;
+$color-white-dark: #f1f1f1;
+$color-white-middle: #f9f9f9;
+$color-black: #000000;
+$color-text: #444444;
+
+
+@mixin font ($size, $line) {
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin background ($dir) {
+  background-image: url($dir);
+  background-repeat: no-repeat;
+}
+
+@mixin list-reset () {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background: url("../pixel/SD-desktop.jpg") no-repeat 50% 0;
+  background-size: 1150px auto;
+  min-height: 750px;
+}
+/*body > * {
+  outline: 2px solid rgba(0, 0 , 150, 0.4);
+}
+
+body > * > * {
+  outline: 2px solid rgba(0, 0 , 255, 0.4);
+}
+
+body > * > * > * {
+  outline: 2px solid rgba(0, 150 , 255, 0.4);
+}
+
+body > * > * > * > * {
+  outline: 2px solid rgba(0, 255 , 255, 0.4);
+}
+
+body > * > * > * > * > * {
+  outline: 2px solid rgba(150, 255 , 255, 0.4);
+}
+
+body > * > * > * > * > * > * {
+  outline: 2px solid red;
+}
+
+body > * > * > * > * > * > * > * {
+  outline: 2px solid rgba(0, 150 , 255, 0.4);
+}*/
+@media (max-width: $tablet-width) {
+  body {
+    background: url("../pixel/SD-tablet.jpg") no-repeat 50% 0;
+    background-size: 768px auto;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  body {
+    background: url("../pixel/SD-mobile.jpg") no-repeat 50% 0;
+    background-size: 320px auto;
+  }
+}
