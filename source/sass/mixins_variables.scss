@@ -1,17 +1,21 @@
-$mobile-width: 767px;
 $tablet-width: 1023px;
+$mobile-width: 767px;
 $mobile-width-only: 767px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-$font-text: "Open-sans", "Arial", sans-serif;
+$font-text: "PT Mono", "Arial", sans-serif;
+$font-title: "Roboto Condensed", "Arial", sans-serif;
+$font-logo: "Roboto", "Arial", sans-serif;
 
-$color-white: #ffffff;
-$color-white-dark: #f1f1f1;
-$color-white-middle: #f9f9f9;
+$color-white: #FFFFFF;
 $color-black: #000000;
 $color-text: #444444;
-
+$color-grey: #1B2D37;
+$color-grey-light: #666666;
+$color-grey-dark: #1B2D37;
+$color-blue: #00B2FF;
+$color-footer: #FAFAFA;
 
 @mixin font ($size, $line) {
   font-size: $size;
@@ -30,8 +34,8 @@ $color-text: #444444;
 }
 
 body {
-  background: url("../pixel/SD-desktop.jpg") no-repeat 50% 0;
-  background-size: 1150px auto;
+  background: url("../../pixel/SD-desktop.jpg") no-repeat 50% 0;
+  background-size: 1920px auto;
   min-height: 750px;
 }
 /*body > * {
@@ -63,14 +67,14 @@ body > * > * > * > * > * > * > * {
 }*/
 @media (max-width: $tablet-width) {
   body {
-    background: url("../pixel/SD-tablet.jpg") no-repeat 50% 0;
-    background-size: 768px auto;
+    background: url("../../pixel/SD-tablet.jpg") no-repeat 50% 0;
+    background-size: 770px auto;
   }
 }
 
-@media (max-width: $desktop-width) {
+@media (max-width: $mobile-width) {
   body {
-    background: url("../pixel/SD-mobile.jpg") no-repeat 50% 0;
+    background: url("../../pixel/SD-mobile.jpg") no-repeat 50% 0;
     background-size: 320px auto;
   }
 }

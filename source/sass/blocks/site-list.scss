@@ -1,0 +1,54 @@
+.site-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 427px;
+  @include list-reset;
+}
+
+.site-list__link {
+  position: relative;
+  padding-left: 32px;
+  background-position: 0 0;
+}
+
+.site-list .site-list__mail {
+  @include background("../img/mail-desktop.svg");
+  padding-left: 37px;
+}
+
+.site-list .site-list__phone-number {
+  @include background("../img/phone-desktop.svg");
+}
+
+@media (max-width: $tablet-width) {
+  .site-list {
+    min-width: 82px;
+  }
+
+  .site-list__link-hidden {
+    display: none;
+  }
+
+  .site-list__link {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .site-list .site-list__mail {
+    background-image: url("../img/mail-mobile.svg");
+    padding-top: 2px;
+    padding-left: 23px;
+  }
+
+  .site-list .site-list__phone-number {
+    background-image: url("../img/phone-mobile.svg");
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .site-list {
+    min-width: 74px;
+  }
+}

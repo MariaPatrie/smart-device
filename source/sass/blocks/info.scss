@@ -1,0 +1,118 @@
+.info {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+
+  padding-top: 43px;
+  padding-right: 10px;
+  padding-bottom: 110px;
+
+  &::before {
+    position: absolute;
+    top: 68px;
+    left: -30px;
+    content: "";
+    width: 220px;
+    height: 317px;
+    @include background("../img/year-desktop.png");
+  }
+}
+
+.info__title {
+  margin: 20px 0;
+  padding: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  @include font(36px, 51px);
+  font-weight: 400;
+  color: $color-grey-light;
+}
+
+.info__text {
+  margin: 21px 0;
+  padding: 0;
+  @include font(16px, 22px);
+  font-weight: 400;
+  color: $color-grey-light;
+}
+
+.info__text--tablet {
+  display: none;
+}
+
+.info__text--desktop {
+  display: block;
+}
+
+.info__button {
+  margin-top: 38px;
+}
+
+@media (max-width: $tablet-width) {
+  .info {
+    width: 720px;
+    padding-left: 185px;
+    padding-top: 16px;
+    padding-right: 0;
+    padding-bottom: 82px;
+
+    &::before {
+      top: 13px;
+      left: -25px;
+      width: 251px;
+      height: 362px;
+      background-image: url("../img/year-tablet.png");
+    }
+  }
+
+  .info__title {
+    margin: 0;
+    margin-bottom: 25px;
+    @include font(32px, 45px);
+  }
+
+  .info__text {
+    margin: 20px 0;
+    padding-left: 3px;
+  }
+
+  .info__text--tablet {
+    display: block;
+  }
+
+  .info__text--desktop {
+    display: none;
+  }
+
+  .info__button {
+    margin-top: 41px;
+    margin-left: 3px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .info {
+    width: 290px;
+    padding-left: 0;
+    padding-top: 27px;
+    padding-bottom: 65px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .info__title {
+    margin-bottom: 23px;
+    @include font(28px, 39px);
+  }
+
+  .info__text {
+    padding: 0;
+    margin-bottom: 40px;
+    padding-left: 1px;
+  }
+
+  .info__button {
+    margin-top: -12px;
+  }
+}

@@ -1,31 +1,76 @@
 .button {
   display: block;
-  width: 260px;
-  min-height: 52px;
-  margin: 0 auto;
+  width: 180px;
+  min-height: 45px;
+  margin: 0;
   padding: 0;
-  padding-top: 15px;
-  border: 2px solid $color-text;
+  padding-top: 14px;
+  border: 1px solid $color-white;
+  border-radius: 5px;
 
-  font-family: $font-text;
-  @include font (17px, 20px);
-  color: $color-text;
+  font-family: $font-title;
+  @include font (14px, 16px);
+  color: $color-white;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 
   &:hover,
   &:focus {
-    color: $color-white;
-    background-color: $color-text;
+    color: $color-text;
+    background-color: $color-white;
     cursor: pointer;
   }
 
   &:active {
-    color: rgba($color-white, 0.3);
+    color: rgba($color-text, 0.3);
   }
 }
 
-.button-submit {
-  padding-top: 0;
-  background-color: $color-white;
+.button--promo {
+  width: 407px;
+  height: 55px;
+  padding-top: 17px;
+  @include font(16px, 19px);
+  background-color: $color-blue;
+  border: 1px solid $color-blue;
+}
+
+.button--info {
+  width: 180px;
+  height: 45px;
+  padding-top: 15px;
+  @include font(14px, 16px);
+  color: $color-blue;
+  border: 1px solid $color-blue;
+}
+
+.button--feedback {
+  width: 270px;
+  height: 45px;
+  padding-top: 3px;
+  @include font(14px, 16px);
+  background-color: $color-blue;
+}
+
+@media (max-width: $tablet-width) {
+  .button--promo {
+    width: 379px;
+  }
+
+  .button--feedback {
+    width: 280px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .button--promo {
+    width: 287px;
+  }
+
+  .button--feedback {
+    width: 290px;
+    margin: 30px 0;
+  }
 }

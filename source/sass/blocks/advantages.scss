@@ -1,0 +1,20 @@
+.advantages {
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 114px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: $tablet-width) {
+  .advantages {
+    width: 720px;
+    padding-top: 57px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .advantages {
+    width: 290px;
+    padding-top: 39px;
+  }
+}

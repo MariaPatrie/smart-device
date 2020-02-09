@@ -1,0 +1,82 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1429px;
+  margin: 0 auto;
+  padding-left: 8px;
+  padding-top: 33px;
+  padding-right: 10px;
+  @include font(16px, 18px);
+  color: $color-white;
+}
+
+.main-nav__nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1091px;
+}
+
+.main-nav__toggle {
+  display: block;
+  width: 37px;
+  height: 37px;
+  @include background("../img/compare.svg");
+  background-position: 50% 50%;
+}
+
+.main-nav__navigation {
+  display:flex;
+  justify-content: space-between;
+  width: 659px;
+  margin-left: 37px;
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav {
+    max-width: 770px;
+    padding: 0 25px;
+    padding-top: 20px;
+  }
+
+  .main-nav__nav-wrapper {
+    width: 350px;
+    justify-content: flex-end;
+  }
+
+  .main-nav__toggle {
+    height: 13px;
+    margin-bottom: 5px;
+  }
+
+  .main-nav__navigation {
+    width: 82px;
+  }
+
+  .main-nav__button {
+    display:none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-nav {
+    max-width: 320px;
+    padding: 0 15px;
+    padding-top: 10px;
+  }
+
+  .main-nav__nav-wrapper {
+    width: 190px;
+  }
+
+  .main-nav__toggle {
+    top: 15px;
+    right: 115px;
+  }
+
+  .main-nav__navigation {
+    width: 74px;
+    margin-left: 26px;
+  }
+}

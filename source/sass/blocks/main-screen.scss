@@ -1,0 +1,131 @@
+.main-screen {
+  margin-top: -110px;
+  background-color: $color-grey;
+  @include background("../img/background-desktop.jpg");
+  background-position: 50% 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-desktop@2x.jpg");
+    background-size: 1920px auto;
+  }
+}
+
+.main-screen__wrapper {
+  position:  relative;
+  max-width: 1429px;
+  height: 878px;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-top: 110px;
+  padding-right: 10px;
+}
+
+.main-screen__page-title {
+  margin-top: 180px;
+  margin-bottom: 27px;
+}
+
+.main-screen__page-description {
+  margin-bottom: 44px;
+}
+
+.main-screen__button {
+  margin-left: 96px;
+  margin-bottom: 70px;
+}
+
+.main-screen__btn-text-mobile {
+  display: none;
+}
+
+.main-screen__btn-text-desktop {
+  display: block;
+}
+
+.main-screen__scroll {
+  position: absolute;
+  left: -32px;
+  bottom: 127px;
+  display: block;
+  width: 93px;
+  height: 16px;
+  @include font(14px, 16px);
+  font-weight: 400;
+  color: $color-white;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: $tablet-width) {
+  .main-screen {
+    background-image: url("../img/background-tablet.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-tablet@2x.jpg");
+      background-size: 770px auto;
+    }
+  }
+
+  .main-screen__wrapper {
+    max-width: 770px;
+    height: 684px;
+    padding-left: 90px;
+  }
+
+  .main-screen__page-title {
+    margin-top: 53px;
+    margin-bottom: 28px;
+    width: 470px;
+  }
+
+  .main-screen__page-description {
+    margin-bottom: 56px;
+  }
+
+  .main-screen__button {
+    margin-left: 49px;
+  }
+
+  .main-screen__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-screen {
+    background-image: url("../img/background-mobile.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+  }
+
+  .main-screen__wrapper {
+    max-width: 320px;
+    height: 646px;
+    padding-left: 15px;
+  }
+
+  .main-screen__page-title {
+    margin-top: 151px;
+    margin-bottom: 27px;
+    width: 277px;
+  }
+
+  .main-screen__page-description {
+    margin-bottom: 40px;
+  }
+
+  .main-screen__button {
+    margin-left: 3px;
+  }
+
+  .main-screen__btn-text-mobile {
+    display: block;
+  }
+
+  .main-screen__btn-text-desktop {
+    display: none;
+  }
+}

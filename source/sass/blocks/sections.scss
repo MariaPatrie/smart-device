@@ -1,0 +1,129 @@
+.sections {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.sections__toggle {
+  display: none;
+}
+
+.sections__title {
+  margin-bottom: 25px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  @include font(15px, 16px);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-grey-dark;
+}
+
+.sections__text {
+  margin: 0;
+  padding: 0;
+  @include font(15px, 25px);
+  font-weight: 400;
+  color: $color-grey-dark;
+  opacity: 0.5;
+}
+
+.sections__list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @inlude list-reset;
+  height: 100px;
+}
+
+.sections__list li {
+  width: 245px;
+}
+
+.sections-link {
+  @include font(15px, 25px);
+  font-weight: 400;
+  color: $color-grey-dark;
+  opacity: 0.5;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .sections__list {
+    height: auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .sections {
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(1.5*100vw);
+      height: 1px;
+      right: calc(-50vw);
+      top: 0;
+      border-top: 1px solid #626962;
+      opacity: 0.2;
+    }
+  }
+
+  .sections__title {
+    margin: 30px 0;
+  }
+
+  .sections__toggle,
+  .contacts__toggle {
+    display: block;
+  }
+
+  .sections--opened .sections__toggle,
+  .contacts--opened .contacts__toggle {
+    background-image: url("../img/icon-menu-close.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .sections--closed .sections__toggle,
+  .contacts--closed .contacts__toggle {
+    background-image: url("../img/icon-menu-open.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .sections__toggle,
+  .contacts__toggle {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    z-index: 2;
+    display: block;
+    padding: 0;
+    width: 20px;
+    height: 14px;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .sections--closed .sections__list,
+  .contacts--closed .contacts__wrapper {
+    display: none;
+  }
+  .sections--opened .sections__list,
+  .contacts--opened .contacts__wrapper {
+    position: static;
+    top: 79px;
+    right: 0;
+    z-index:10;
+  }
+}

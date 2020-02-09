@@ -1,0 +1,45 @@
+.page-description {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 97px;
+  width: 710px;
+  @include font(22px, 34px);
+  font-weight: 400;
+  text-align: left;
+  color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 17px;
+    height: 1px;
+    width: 66px;
+    border: 1px solid $color-white;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-description {
+    width: 400px;
+    padding-left: 49px;
+    @include font(18px, 28px);
+
+    &::before {
+      width: 33px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-description {
+    width: 288px;
+    padding-left: 51px;
+    @include font(16px, 25px);
+
+    &::before {
+      top: 16px;
+    }
+  }
+}
