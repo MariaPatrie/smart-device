@@ -62,7 +62,7 @@
   top: 48px;
   left: 43px;
   width: 170px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $font-title;
   @include font(20px, 30px);
   font-weight: 400;
   color: $color-white;
@@ -159,11 +159,8 @@
     margin-bottom: 30px;
   }
 
-  .products-item {
-
-    &::before {
-      width: 290px;
-    }
+  .products-item::before {
+    width: 290px;
   }
 
   .products-item__title {

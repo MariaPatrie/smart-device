@@ -31,7 +31,7 @@
   }
 
   &:hover .advantage-item__title,
-  &:hover .advantage-item__title,
+  &:hover .advantage-item__description,
   &:focus .advantage-item__title,
   &:focus .advantage-item__description {
     color: $color-white;
@@ -39,7 +39,7 @@
 
   &:hover svg,
   &:focus svg {
-    color: $color-white;
+    fill: $color-white;
   }
 
   &:active {
@@ -53,6 +53,7 @@
   left: 42px;
   width: 36px;
   height: 35px;
+  fill: $color-blue;
 }
 
 .advantage-item--stopwatch svg {
@@ -74,7 +75,7 @@
 .advantage-item__title {
   margin: 15px 0;
   padding: 0;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $font-title;
   @include font(14px, 16px);
   font-weight: 400;
   color: $color-blue;
@@ -159,10 +160,10 @@
   .advantage-item--detective {
     padding-right: 18px;
     padding-top: 57px;
+  }
 
-    & .advantage-item__description {
-      margin-top: -16px;
-    }
+  .advantage-item--detective .advantage-item__description {
+    margin-top: -16px;
   }
 
   .advantage-item__title {

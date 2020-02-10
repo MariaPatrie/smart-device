@@ -6,13 +6,14 @@
   padding: 0;
 }
 
-.sections__toggle {
+.sections__toggle,
+.contacts__toggle {
   display: none;
 }
 
 .sections__title {
   margin-bottom: 25px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $font-title;
   @include font(15px, 16px);
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -125,5 +126,6 @@
     top: 79px;
     right: 0;
     z-index:10;
+    margin-bottom: 20px;
   }
 }

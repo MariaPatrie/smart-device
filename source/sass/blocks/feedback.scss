@@ -1,5 +1,5 @@
 .feedback {
-  background-color: $color-grey-dark;
+  background-color: $color-blue;
   @include background("../img/background-desktop-feedback.jpg");
   background-position: 50% 0;
 
@@ -10,9 +10,10 @@
 }
 
 .feedback__wrapper {
+  display: flex;
+  justify-content: flex-end;
   width: 1170px;
   margin: 0 auto;
-  padding-left: 51%;
   padding-top: 91px;
   padding-bottom: 52px;
 }
@@ -21,7 +22,7 @@
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $font-title;
   @include font(36px, 51px);
   font-weight: 400;
   color: $color-white;
