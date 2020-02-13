@@ -54,6 +54,18 @@
   background-color: $color-blue;
 }
 
+.button--modal {
+  width: 411px;
+  height: 47px;
+  margin-top: -5px;
+  margin-bottom: 33px;
+  padding-top: 0;
+  @include font(14px, 16px);
+  background-color: $color-blue;
+  border: 1px solid $color-white;
+  border-radius: 5px;
+}
+
 @media (max-width: $tablet-width) {
   .button--promo {
     width: 379px;

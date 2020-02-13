@@ -29,7 +29,7 @@
               <a class="site-list__link site-list__phone-number" href="tel:+74950005252"><span class="site-list__link-hidden">+7 (495) 000 52 52</span></a>
             </li>
           </ul>
-          <a class="main-nav__button button" href="#">Заказать звонок</a>
+          <a class="main-nav__button button feedback-button" href="#">Заказать звонок</a>
         </div>
       </div>
     </nav>
@@ -175,7 +175,7 @@
             <li><a class="sections-link" href="#">Контакты</a></li>
           </ul>
         </div>
-        <div class="page-footer__contacts sections contacts--opened">
+        <div class="page-footer__contacts sections sections--opened">
           <p class="sections__title">Наш офис</p>
           <button class="contacts__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="contacts__wrapper">
@@ -196,6 +196,34 @@
       </div>
     </div>
   </footer>
-<script src="js/menu.js"></script>
+
+  <section class="modal modal-feedback">
+    <h2 class="visually-hidden">Обратная связь</h2>
+    <h3 class="modal-feedback__title">Закажите звонок</h3>
+    <p class="modal-feedback__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form class="modal-feedback__form modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="modal-item">
+        <label class="visually-hidden" for="modal-name">Имя</label>
+        <input id="modal-name" type="text" name="name" placeholder="Имя">
+      </p>
+      <p class="modal-item">
+        <label class="visually-hidden" for="modal-phone">Телефон</label>
+        <input id="modal-phone" type="tel" name="phone" placeholder="Телефон">
+      </p>
+      <p class="modal-item">
+        <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+        <textarea id="modal-question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
+      </p>
+      <button class="modal__button button button--modal">Отправить</button>
+      <p class="modal-item modal-item--checkbox">
+        <input class="visually-hidden" type="checkbox" id="modal-consent" name="consent" checked="">
+        <label for="modal-consent">Я согласен на обработку персональных данных</label>
+      </p>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+
+  <div class="overlay"></div>
+  <script src="js/menu.js"></script>
 </body>
 </html>

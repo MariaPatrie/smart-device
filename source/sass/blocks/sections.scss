@@ -89,14 +89,14 @@
   }
 
   .sections--opened .sections__toggle,
-  .contacts--opened .contacts__toggle {
+  .sections--opened .contacts__toggle {
     background-image: url("../img/icon-menu-close.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
 
   .sections--closed .sections__toggle,
-  .contacts--closed .contacts__toggle {
+  .sections--closed .contacts__toggle {
     background-image: url("../img/icon-menu-open.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -117,11 +117,11 @@
   }
 
   .sections--closed .sections__list,
-  .contacts--closed .contacts__wrapper {
+  .sections--closed .contacts__wrapper {
     display: none;
   }
   .sections--opened .sections__list,
-  .contacts--opened .contacts__wrapper {
+  .sections--opened .contacts__wrapper {
     position: static;
     top: 79px;
     right: 0;
