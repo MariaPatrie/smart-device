@@ -110,10 +110,10 @@
 
 @media (max-width: $mobile-width) {
   .main-screen {
-      background-image: url("../img/background-mobile-img.png"), url("../img/background-mask.png");
+      background-image: url("../img/background-mask.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background-mobile-img@2x.png"), url("../img/background-mask@2x.png");
+      background-image: url("../img/background-mask@2x.png");
     }
   }
 
