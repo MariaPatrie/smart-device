@@ -1,11 +1,11 @@
 .section-wrapper {
   background-color: $color-white;
-  @include background("../img/background-desktop-info.jpg");
-  background-position: 50% 0;
+  @include background("../img/background-desktop-info.png");
+  background-position: 50% -30px;
+  background-size: 1930px auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/background-desktop-info@2x.jpg");
-    background-size: 1920px auto;
+    background-image: url("../img/background-desktop-info@2x.png");
   }
 }
 
@@ -14,6 +14,7 @@
     background-image: url("../img/triangle.png");
     background-position-x: 202px;
     background-position-y: 92px;
+    background-size: auto;
   }
 }
 

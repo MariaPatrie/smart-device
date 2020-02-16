@@ -2,8 +2,8 @@
   position: relative;
   margin: 0;
   padding: 0;
-  padding-left: 97px;
-  width: 710px;
+  padding-left: 92px;
+  width: 50%;
   @include font(22px, 34px);
   font-weight: 400;
   text-align: left;
@@ -22,8 +22,8 @@
 
 @media (max-width: $tablet-width) {
   .page-description {
-    width: 400px;
-    padding-left: 49px;
+    width: 65%;
+    padding-left: 51px;
     @include font(18px, 28px);
 
     &::before {

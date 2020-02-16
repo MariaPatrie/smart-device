@@ -40,7 +40,7 @@
 }
 
 .sections__list li {
-  width: 245px;
+  width: 48%;
 }
 
 .sections-link {
@@ -61,6 +61,10 @@
 @media (max-width: $tablet-width) {
   .sections__list {
     height: auto;
+  }
+
+  .sections__list li {
+    width: 100%;
   }
 }
 

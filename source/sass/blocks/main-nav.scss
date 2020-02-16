@@ -4,11 +4,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1429px;
+  max-width: 1411px;
+  width: 97%;
   margin: 0 auto;
-  padding-left: 8px;
   padding-top: 33px;
-  padding-right: 10px;
   @include font(16px, 18px);
   color: $color-white;
 }
@@ -17,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1091px;
+  width: 77%;
 }
 
 .main-nav__toggle {
@@ -30,20 +29,24 @@
 
 .main-nav__navigation {
   display:flex;
-  justify-content: space-between;
-  width: 659px;
+  justify-content: flex-end;
+  flex-grow: 1;
   margin-left: 37px;
+}
+
+.main-nav__button {
+  margin-left: 48px;
+  margin-right: 2px;
 }
 
 @media (max-width: $tablet-width) {
   .main-nav {
-    max-width: 770px;
-    padding: 0 25px;
+    max-width: 94%;
+    padding: 0;
     padding-top: 20px;
   }
 
   .main-nav__nav-wrapper {
-    width: 350px;
     justify-content: flex-end;
   }
 
@@ -53,7 +56,8 @@
   }
 
   .main-nav__navigation {
-    width: 82px;
+    flex-grow: 0;
+    margin-left: 3px;
   }
 
   .main-nav__button {
@@ -63,22 +67,18 @@
 
 @media (max-width: $mobile-width) {
   .main-nav {
-    max-width: 320px;
-    padding: 0 15px;
+    min-width: 290px;
+    width: 91%;
     padding-top: 10px;
-  }
-
-  .main-nav__nav-wrapper {
-    width: 190px;
   }
 
   .main-nav__toggle {
     top: 15px;
     right: 115px;
+    margin-right: -22px;
   }
 
   .main-nav__navigation {
-    width: 74px;
     margin-left: 26px;
   }
 }

@@ -1,9 +1,15 @@
 .site-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  min-width: 427px;
+  flex-wrap: wrap;
+  width: 100%;
   @include list-reset;
+}
+
+.site-list__item {
+  min-width: 205px;
+  margin-left: 18px;
 }
 
 .site-list__link {
@@ -22,8 +28,9 @@
 }
 
 @media (max-width: $tablet-width) {
-  .site-list {
-    min-width: 82px;
+  .site-list__item {
+    min-width: 24px;
+    margin-left: 33px;
   }
 
   .site-list__link-hidden {
@@ -48,7 +55,7 @@
 }
 
 @media (max-width: $mobile-width) {
-  .site-list {
-    min-width: 74px;
+  .site-list__item {
+    margin-left: 23px;
   }
 }

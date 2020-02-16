@@ -1,24 +1,29 @@
 .products-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
   @include list-reset;
 }
 
 .products-list__item {
-  width: 370px;
+  width: 31.6%;
   min-height: 620px;
+  margin-right: 2.6%;
   margin-bottom: 30px;
 }
 
 .products-item {
   position: relative;
 
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
   &::before {
     position: absolute;
     content: "";
-    width: 370px;
-    height: 620px;
+    width: 100%;
+    height: 100%;
     background: $color-grey;
     opacity: 0.8;
   }
@@ -27,30 +32,30 @@
 .products-item--product-1 {
   @include background("../img/product-1.jpg");
   background-position: 50% 0;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/product-1@2x.jpg");
-    background-size: 370px auto;
   }
 }
 
 .products-item--product-2 {
   @include background("../img/product-2.jpg");
   background-position: 50% 0;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/product-2@2x.jpg");
-    background-size: 370px auto;
   }
 }
 
 .products-item--product-3 {
   @include background("../img/product-3.jpg");
   background-position: 50% 0;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/product-3@2x.jpg");
-    background-size: 370px auto;
   }
 }
 
@@ -93,22 +98,15 @@
 
 @media (max-width: $tablet-width) {
   .products-list {
-    width: 720px;
+    margin-left: 0;
     padding-top: 0;
   }
 
   .products-list__item {
-    width: 715px;
+    width: 100%;
     min-height: 256px;
     margin-bottom: 46px;
-  }
-
-  .products-item {
-
-    &::before {
-      width: 715px;
-      height: 256px;
-    }
+    margin-right: 0;
   }
 
   .products-item__title {
@@ -150,17 +148,11 @@
 
 @media (max-width: $mobile-width) {
   .products-list {
-    width: 290px;
     padding-top: 39px;
   }
 
   .products-list__item {
-    width: 290px;
     margin-bottom: 30px;
-  }
-
-  .products-item::before {
-    width: 290px;
   }
 
   .products-item__title {

@@ -1,5 +1,6 @@
 .advantages {
-  width: 1170px;
+  max-width: 1170px;
+  width: 81%;
   margin: 0 auto;
   padding-top: 114px;
   padding-bottom: 10px;
@@ -7,14 +8,15 @@
 
 @media (max-width: $tablet-width) {
   .advantages {
-    width: 720px;
+    width: 96%;
     padding-top: 57px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .advantages {
-    width: 290px;
+    width: 91%;
+    min-width: 290px;
     padding-top: 39px;
   }
 }

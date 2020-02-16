@@ -1,23 +1,22 @@
 .main-screen {
   margin-top: -110px;
   background-color: $color-grey;
-  @include background("../img/background-desktop.jpg");
+  background-image: url("../img/background-desktop-img.png"), url("../img/background-mask.png");
   background-position: 50% 0;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/background-desktop@2x.jpg");
-    background-size: 1920px auto;
+    background-image: url("../img/background-desktop-img@2x.png"), url("../img/background-mask@2x.png");
   }
 }
 
 .main-screen__wrapper {
   position:  relative;
-  max-width: 1429px;
+  max-width: 1411px;
+  width: 97%;
   height: 878px;
   margin: 0 auto;
-  padding-left: 5px;
   padding-top: 110px;
-  padding-right: 10px;
 }
 
 .main-screen__page-title {
@@ -44,7 +43,7 @@
 
 .main-screen__scroll {
   position: absolute;
-  left: -32px;
+  left: -40px;
   bottom: 127px;
   display: block;
   width: 93px;
@@ -58,24 +57,42 @@
 
 @media (max-width: $tablet-width) {
   .main-screen {
-    background-image: url("../img/background-tablet.jpg");
+    position: relative;
+    background-image: url("../img/background-mask.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background-tablet@2x.jpg");
-      background-size: 770px auto;
+      background-image: url("../img/background-mask@2x.png");
+    }
+
+    &::after {
+      content: "";
+      width: 320px;
+      height: 450px;
+      top: 0;
+      right: 0;
+      position: absolute;
+      background-image: url("../img/background-mobile-img.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/background-mobile-img@2x.png");
+      }
     }
   }
 
   .main-screen__wrapper {
-    max-width: 770px;
+    width: 94%;
     height: 684px;
-    padding-left: 90px;
+    padding-left: 64px;
   }
 
   .main-screen__page-title {
+    position: relative;
+    z-index: 1;
     margin-top: 53px;
     margin-bottom: 28px;
-    width: 470px;
+    width: 56%;
   }
 
   .main-screen__page-description {
@@ -93,16 +110,16 @@
 
 @media (max-width: $mobile-width) {
   .main-screen {
-    background-image: url("../img/background-mobile.jpg");
+      background-image: url("../img/background-mobile-img.png"), url("../img/background-mask.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background-mobile@2x.jpg");
-      background-size: 320px auto;
+      background-image: url("../img/background-mobile-img@2x.png"), url("../img/background-mask@2x.png");
     }
   }
 
   .main-screen__wrapper {
-    max-width: 320px;
+    min-width: 320px;
+    width: 91%;
     height: 646px;
     padding-left: 15px;
   }

@@ -3,7 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 570px;
+  width: 572px;
   padding-top: 10px;
   padding-bottom: 20px;
 }
@@ -16,7 +16,7 @@
 .feedback-item input,
 .feedback-item textarea {
   width: 100%;
-  padding-left: 20px;
+  padding-left: 17px;
   @include font(16px, 22px);
   font-weight: 400;
   color: $color-white;
@@ -32,17 +32,17 @@
 }
 
 .feedback-item input {
-  height: 50px;
+  height: 51px;
 }
 
 .feedback-item textarea {
-  padding: 10px 20px;
+  padding: 12px 18px;
   height: 154px;
   resize: none;
 }
 
 .feedback-item--checkbox {
-  padding-left: 42px;
+  padding-left: 40px;
 }
 
 .feedback-item--checkbox label {
@@ -96,12 +96,14 @@
 
 @media (max-width: $tablet-width) {
   .feedback-form {
-    width: 590px;
+    width: 100%;
     padding-top: 15px;
   }
 
   .feedback-item__wrapper {
-    margin: 41px 0;
+    margin: 0;
+    margin-top: 39px;
+    margin-bottom: 41px;
   }
 
   .feedback-item input {
@@ -110,18 +112,22 @@
 
   .feedback-item textarea {
     height: 160px;
+    margin-bottom: 3px;
+  }
+
+  .feedback-item--checkbox {
+    padding-left: 42px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .feedback-form {
-    width: 290px;
     padding-top: 27px;
     padding-bottom: 10px;
   }
 
   .feedback-item__wrapper {
-    display: block;
+    flex-direction: column;
     margin: 0;
   }
 
@@ -130,9 +136,14 @@
     margin-bottom: 30px;
   }
 
+  .feedback-item input {
+    padding-left: 16px;
+  }
+  
   .feedback-item textarea {
     padding: 15px 17px;
     height: 104px;
+    margin-bottom: -2px;
   }
 
   .feedback-item--checkbox {

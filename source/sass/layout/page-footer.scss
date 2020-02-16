@@ -4,14 +4,13 @@
 
 .page-footer__wrapper {
   position: relative;
-  max-width: 1429px;
+  max-width: 1418px;
+  width: 98%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-left: 6px;
   padding-top: 51px;
-  padding-right: 5px;
 }
 
 .page-footer__logo {
@@ -25,27 +24,30 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 995px;
+  width: 70%;
   margin-bottom: 53px;
 }
 
 .page-footer__sections {
-  width: 615px;
+  width: 62%;
 }
 
 .page-footer__contacts {
-  width: 337px;
+  width: 34%;
 }
 
 .page-footer__copyright {
-  width: 457px;
+  width: 32.4%;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
 }
 
 .page-footer__designing {
   position: relative;
-  width: 813px;
+  width: 57.2%;
   margin: 20px 0;
   margin-right: 6px;
+  flex-shrink: 1;
 
   &::before {
     content: "";
@@ -61,8 +63,7 @@
 
 @media (max-width: $tablet-width) {
   .page-footer__wrapper {
-    width: 770px;
-    padding: 0 25px;
+    width: 96%;
     padding-top: 20px;
   }
 
@@ -80,7 +81,7 @@
   .page-footer__sections-wrapper {
     position: relative;
     width: 100%;
-    margin-top: 49px;
+    margin-top: 46px;
     margin-bottom: 38px;
 
     &::before {
@@ -105,11 +106,11 @@
   }
 
   .page-footer__sections {
-    width: 300px;
+    width: 50%;
   }
 
   .page-footer__contacts {
-    width: 344px;
+    width: 48%;
   }
 }
 
@@ -128,6 +129,7 @@
   }
 
   .page-footer__sections-wrapper {
+    flex-direction: column;
     margin-top: 51px;
     margin-bottom: 0;
 
@@ -150,10 +152,12 @@
   }
 
   .page-footer__sections {
+    width: 100%;
     position: relative;
   }
 
   .page-footer__contacts {
+    width: 100%;
     position: relative;
   }
 }

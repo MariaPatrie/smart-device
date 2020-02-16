@@ -1,10 +1,10 @@
 .feedback {
   background-color: $color-blue;
-  @include background("../img/background-desktop-feedback.jpg");
-  background-position: 50% 0;
+  @include background("../img/background-desktop-feedback-img.png");
+  background-position: 18% -60px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/background-desktop-feedback@2x.jpg");
+    background-image: url("../img/background-desktop-feedback-img@2x.png");
     background-size: 1920px auto;
   }
 }
@@ -12,7 +12,8 @@
 .feedback__wrapper {
   display: flex;
   justify-content: flex-end;
-  width: 1170px;
+  max-width: 1170px;
+  width: 81%;
   margin: 0 auto;
   padding-top: 91px;
   padding-bottom: 52px;
@@ -43,8 +44,8 @@
   }
 
   .feedback__wrapper {
-    width: 720px;
-    padding: 65px;
+    width: 79%;
+    justify-content: center;
     padding-top: 81px;
     padding-bottom: 42px;
   }
@@ -61,10 +62,11 @@
 
 @media (max-width: $mobile-width) {
   .feedback__wrapper {
-    width: 320px;
-    padding: 0 15px;
+    width: 91%;
+    min-width: 290px;
     padding-top: 30px;
     padding-bottom: 3px;
+    flex-direction: column;
   }
 
   .feedback__title {
