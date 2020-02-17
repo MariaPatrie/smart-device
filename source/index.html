@@ -41,12 +41,12 @@
       <div class="main-screen__wrapper">
         <h1 class="main-screen__page-title page-title">Печатные платы</h1>
         <p class="main-screen__page-description page-description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="main-screen__button button button--promo" href="#"><span class="main-screen__btn-text-desktop">Получить бесплатную консультацию</span><span class="main-screen__btn-text-mobile">Бесплатная консультация</span></a>
-        <span class="main-screen__scroll">Скролл вниз</span>
+        <a class="main-screen__button button button--promo scroll-to-feedback" href="#anchor-feedback"><span class="main-screen__btn-text-desktop">Получить бесплатную консультацию</span><span class="main-screen__btn-text-mobile">Бесплатная консультация</span></a>
+        <span class="main-screen__scroll"><a class="scroll-to-advantages" href="#anchor-advantages">Скролл вниз</a></span>
       </div>
     </div>
     <div class="section-wrapper">
-      <section class="advantages">
+      <section class="advantages" id="anchor-advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages__list advantages-list">
           <li class="advantages-list__item advantage-item advantage-item--stopwatch">
@@ -106,7 +106,7 @@
         </ul>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="anchor-feedback">
       <div class="feedback__wrapper">
         <div>
           <h2 class="visually-hidden">Обратная связь</h2>
@@ -116,11 +116,11 @@
             <div class="feedback-item__wrapper">
               <p class="feedback-item">
                 <label class="visually-hidden" for="user-name">Имя</label>
-                <input id="user-name" type="text" name="name" placeholder="Имя">
+                <input id="user-name" type="text" name="name" placeholder="Имя" required>
               </p>
               <p class="feedback-item">
                 <label class="visually-hidden" for="user-phone">Телефон</label>
-                <input id="user-phone" type="tel" name="phone" placeholder="Телефон">
+                <input id="user-phone" type="tel" name="phone" placeholder="Телефон" required>
               </p>
             </div>
             <p class="feedback-item">
@@ -206,11 +206,11 @@
     <form class="modal-feedback__form modal-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="modal-item">
         <label class="visually-hidden" for="modal-name">Имя</label>
-        <input id="modal-name" type="text" name="name" placeholder="Имя">
+        <input id="modal-name" type="text" name="name" placeholder="Имя" required>
       </p>
       <p class="modal-item">
         <label class="visually-hidden" for="modal-phone">Телефон</label>
-        <input id="modal-phone" type="tel" name="phone" placeholder="Телефон">
+        <input id="modal-phone" type="tel" name="phone" placeholder="Телефон" required>
       </p>
       <p class="modal-item">
         <label class="visually-hidden" for="modal-question">Ваш вопрос</label>

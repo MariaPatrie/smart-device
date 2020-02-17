@@ -15,16 +15,19 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  outline: none;
 
   &:hover,
   &:focus {
     color: $color-text;
     background-color: $color-white;
     cursor: pointer;
+    outline: none;
   }
 
   &:active {
     color: rgba($color-text, 0.3);
+    outline: none;
   }
 }
 

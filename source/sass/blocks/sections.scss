@@ -87,11 +87,6 @@
     margin: 30px 0;
   }
 
-  .sections__toggle,
-  .contacts__toggle {
-    display: block;
-  }
-
   .sections--opened .sections__toggle,
   .sections--opened .contacts__toggle {
     background-image: url("../img/icon-menu-close.svg");
@@ -108,6 +103,7 @@
 
   .sections__toggle,
   .contacts__toggle {
+    display: block;
     position: absolute;
     top: 32px;
     right: 0;
@@ -118,6 +114,7 @@
     height: 14px;
     background-color: transparent;
     border: 0;
+    outline: none;
   }
 
   .sections--closed .sections__list,
