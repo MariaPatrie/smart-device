@@ -1,5 +1,5 @@
-var navToggleSections = document.querySelector('.sections__toggle');
-var navToggleContacts = document.querySelector('.contacts__toggle');
+var navToggleSections = document.querySelector('.sections__toggle-sections');
+var navToggleContacts = document.querySelector('.sections__toggle-contacts');
 var mainNavSections = document.querySelector('.page-footer__sections');
 var mainNavContacts = document.querySelector('.page-footer__contacts');
 

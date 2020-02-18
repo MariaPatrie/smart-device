@@ -58,26 +58,10 @@
 @media (max-width: $tablet-width) {
   .main-screen {
     position: relative;
-    background-image: url("../img/background-mask.png");
+    background-image: url("../img/background-tablet-img.png"), url("../img/background-mask.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background-mask@2x.png");
-    }
-
-    &::after {
-      content: "";
-      width: 320px;
-      height: 450px;
-      top: 0;
-      right: 0;
-      position: absolute;
-      background-image: url("../img/background-mobile-img.png");
-      background-position: 0 0;
-      background-repeat: no-repeat;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/background-mobile-img@2x.png");
-      }
+      background-image: url("../img/background-tablet-img.png"), url("../img/background-mask@2x.png");
     }
   }
 
@@ -114,6 +98,22 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/background-mask@2x.png");
+    }
+
+    &::after {
+      content: "";
+      width: 320px;
+      height: 450px;
+      top: 0;
+      right: 0;
+      position: absolute;
+      background-image: url("../img/background-mobile-img.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/background-mobile-img@2x.png");
+      }
     }
   }
 

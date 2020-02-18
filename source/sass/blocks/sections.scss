@@ -6,8 +6,8 @@
   padding: 0;
 }
 
-.sections__toggle,
-.contacts__toggle {
+.sections__toggle-sections,
+.sections__toggle-contacts {
   display: none;
 }
 
@@ -87,22 +87,22 @@
     margin: 30px 0;
   }
 
-  .sections--opened .sections__toggle,
-  .sections--opened .contacts__toggle {
+  .sections--opened .sections__toggle-sections,
+  .sections--opened .sections__toggle-contacts {
     background-image: url("../img/icon-menu-close.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
 
-  .sections--closed .sections__toggle,
-  .sections--closed .contacts__toggle {
+  .sections--closed .sections__toggle-sections,
+  .sections--closed .sections__toggle-contacts {
     background-image: url("../img/icon-menu-open.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
 
-  .sections__toggle,
-  .contacts__toggle {
+  .sections__toggle-sections,
+  .sections__toggle-contacts {
     display: block;
     position: absolute;
     top: 32px;

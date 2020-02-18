@@ -10,12 +10,17 @@ html {
 
 body {
   margin: 0;
-
   font-family: $font-text;
   font-weight: 400;
   letter-spacing: normal;
+}
+
+html,
+body {
   overflow-x: hidden;
   overflow-y: auto;
+  position: relative;
+  height: 100%;
 }
 
 img {
