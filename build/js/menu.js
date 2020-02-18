@@ -141,6 +141,13 @@ phone.addEventListener("input", mask);
 phone.addEventListener("focus", mask);
 phone.addEventListener("blur", mask);
 
+var feedback = document.querySelector('.feedback-form');
+var phoneUser = feedback.querySelector('input[name="phone"]');
+
+phoneUser.addEventListener("input", mask);
+phoneUser.addEventListener("focus", mask);
+phoneUser.addEventListener("blur", mask);
+
 function scrollTo(evt) {
   evt.preventDefault();
   var blockID = this.getAttribute('href');

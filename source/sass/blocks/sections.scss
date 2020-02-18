@@ -50,7 +50,7 @@
   opacity: 0.5;
 }
 
-.contacts__wrapper {
+.sections__wrapper {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -118,11 +118,11 @@
   }
 
   .sections--closed .sections__list,
-  .sections--closed .contacts__wrapper {
+  .sections--closed .sections__wrapper {
     display: none;
   }
   .sections--opened .sections__list,
-  .sections--opened .contacts__wrapper {
+  .sections--opened .sections__wrapper {
     position: static;
     top: 79px;
     right: 0;

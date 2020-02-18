@@ -82,7 +82,7 @@
       <section class="info">
         <h2 class="info__title">О компании</h2>
         <p class="info__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-        <p class="info__text"><span class="info__text--desktop">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span><span class="info__text--tablet">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..</span></p>
+        <p class="info__text"><span class="info__text-desktop">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span><span class="info__text-tablet">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..</span></p>
         <a class="info__button button button--info" href="#">Подробнее</a>
       </section>
     </div>
@@ -113,7 +113,7 @@
           <h3 class="feedback__title">Остались вопросы? Задайте их нам!</h3>
           <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
           <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="feedback-item__wrapper">
+            <div class="feedback-form__wrapper">
               <p class="feedback-item">
                 <label class="visually-hidden" for="user-name">Имя</label>
                 <input id="user-name" type="text" name="name" placeholder="Имя" required>
@@ -125,9 +125,9 @@
             </div>
             <p class="feedback-item">
               <label class="visually-hidden" for="user-question">Ваш вопрос</label>
-              <textarea id="user-question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
+              <textarea id="user-question" name="question" rows="10" placeholder="Ваш вопрос" required></textarea>
             </p>
-            <div class="feedback-item__wrapper">
+            <div class="feedback-form__wrapper">
               <button class="feedback__button button button--feedback">Задать вопрос</button>
               <p class="feedback-item feedback-item--checkbox">
                 <input class="visually-hidden" type="checkbox" id="consent" name="consent" checked>
@@ -166,7 +166,7 @@
       <div class="page-footer__sections-wrapper">
         <div class="page-footer__sections sections sections--opened">
           <p class="sections__title">Разделы сайта</p>
-          <button class="sections__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="sections__toggle-sections" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="sections__list">
             <li><a class="sections-link" href="#">О компании</a></li>
             <li><a class="sections-link" href="#">Продукты</a></li>
@@ -179,8 +179,8 @@
         </div>
         <div class="page-footer__contacts sections sections--closed">
           <p class="sections__title">Наш офис</p>
-          <button class="contacts__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <div class="contacts__wrapper">
+          <button class="sections__toggle-contacts" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="sections__wrapper">
             <p class="sections__text">г. Мытищи, Олимпийский проспект, д.10</p>
             <a class="sections-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
             <a class="sections-link" href="tel:+79250038767">+7 (925) 003-87-67</a>
@@ -214,7 +214,7 @@
       </p>
       <p class="modal-item">
         <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
-        <textarea id="modal-question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
+        <textarea id="modal-question" name="question" rows="10" placeholder="Ваш вопрос" required></textarea>
       </p>
       <button class="modal__button button button--modal">Отправить</button>
       <p class="modal-item modal-item--checkbox">

@@ -37,11 +37,11 @@
   color: $color-grey-light;
 }
 
-.info__text--tablet {
+.info__text-tablet {
   display: none;
 }
 
-.info__text--desktop {
+.info__text-desktop {
   display: block;
 }
 
@@ -77,11 +77,11 @@
     padding-left: 3px;
   }
 
-  .info__text--tablet {
+  .info__text-tablet {
     display: block;
   }
 
-  .info__text--desktop {
+  .info__text-desktop {
     display: none;
   }
 
