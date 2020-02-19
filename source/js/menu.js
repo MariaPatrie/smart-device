@@ -14,8 +14,6 @@ navToggleSections.addEventListener('click', function() {
   } else {
     mainNavSections.classList.add('sections--closed');
     mainNavSections.classList.remove('sections--opened');
-    mainNavContacts.classList.remove('sections--closed');
-    mainNavContacts.classList.add('sections--opened');
   }
 });
 
@@ -28,8 +26,6 @@ navToggleContacts.addEventListener('click', function() {
   } else {
     mainNavContacts.classList.add('sections--closed');
     mainNavContacts.classList.remove('sections--opened');
-    mainNavSections.classList.remove('sections--closed');
-    mainNavSections.classList.add('sections--opened');
   }
 });
 
