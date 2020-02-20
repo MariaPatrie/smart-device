@@ -95,12 +95,17 @@ form.addEventListener('submit', function (evt) {
       localStorage.setItem('question', question.value);
     }
   }
+});
+
+function testPhone() {
   if (phone.value.length < 17) {
     phone.setCustomValidity('Номер должен состоять из 10-ти цифр');
+    return false;
   } else {
     phone.setCustomValidity('');
+    return true;
   }
-});
+};
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
@@ -139,6 +144,11 @@ function mask(evt) {
 
   if (evt.type == 'blur') {
     if (this.value.length == 2) this.value = "";
+    /*if (this.value.length < 17) {
+      this.setCustomValidity('Номер должен состоять из 10-ти цифр');
+    } else {
+      this.setCustomValidity('');
+    }*/
   } else setCursorPosition(this.value.length, this)
 };
 
@@ -153,13 +163,15 @@ phoneUser.addEventListener('input', mask);
 phoneUser.addEventListener('focus', mask);
 phoneUser.addEventListener('blur', mask);
 
-feedback.addEventListener('submit', function (evt) {
+function testPhoneUser() {
   if (phoneUser.value.length < 17) {
     phoneUser.setCustomValidity('Номер должен состоять из 10-ти цифр');
+    return false;
   } else {
     phoneUser.setCustomValidity('');
+    return true;
   }
-});
+};
 
 function scrollTo(evt) {
   evt.preventDefault();
