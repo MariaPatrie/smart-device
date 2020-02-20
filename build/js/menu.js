@@ -44,67 +44,67 @@ var isStorageSupport = true;
 var storage = "";
 
 try {
-  storage = localStorage.getItem("user");
+  storage = localStorage.getItem('user');
 } catch (err) {
   isStorageSupport = false;
 }
 
 
-link.addEventListener("click", function (evt) {
+link.addEventListener('click', function (evt) {
   evt.preventDefault();
-  overlay.classList.add("overlay-show");
-  popup.classList.add("modal-show");
-  document.getElementsByTagName("body")[0].style.overflow="hidden";
+  overlay.classList.add('overlay-show');
+  popup.classList.add('modal-show');
+  document.getElementsByTagName('body')[0].style.overflow='hidden';
 
   if (storage) {
     user.value = storage;
-    phone.value = localStorage.getItem("phone");
-    question.value = localStorage.getItem("question");
+    phone.value = localStorage.getItem('phone');
+    question.value = localStorage.getItem('question');
     user.focus();
   } else {
     user.focus();
   }
 });
 
-close.addEventListener("click", function (evt) {
+close.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.remove("modal-show");
-  overlay.classList.remove("overlay-show");
-  document.getElementsByTagName("body")[0].style.overflow[1]="auto";
-  popup.classList.remove("modal-error");
+  popup.classList.remove('modal-show');
+  overlay.classList.remove('overlay-show');
+  document.getElementsByTagName('body')[0].style.overflow[1]='auto';
+  popup.classList.remove('modal-error');
 });
 
-overlay.addEventListener("click", function (evt) {
+overlay.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.remove("modal-show");
-  overlay.classList.remove("overlay-show");
-  document.getElementsByTagName("body")[0].style.overflow[1]="auto";
-  popup.classList.remove("modal-error");
+  popup.classList.remove('modal-show');
+  overlay.classList.remove('overlay-show');
+  document.getElementsByTagName('body')[0].style.overflow[1]='auto';
+  popup.classList.remove('modal-error');
 });
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener('submit', function (evt) {
   if (!user.value || !phone.value) {
     evt.preventDefault();
-    popup.classList.remove("modal-error");
+    popup.classList.remove('modal-error');
     popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("modal-error");
+    popup.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("user", user.value);
-      localStorage.setItem("phone", phone.value);
-      localStorage.setItem("question", question.value);
+      localStorage.setItem('user', user.value);
+      localStorage.setItem('phone', phone.value);
+      localStorage.setItem('question', question.value);
     }
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-      overlay.classList.remove("overlay-show");
-      document.getElementsByTagName("body")[0].style.overflow[1]="auto";
-      popup.classList.remove("modal-error");
+    if (popup.classList.contains('modal-show')) {
+      popup.classList.remove('modal-show');
+      overlay.classList.remove('overlay-show');
+      document.getElementsByTagName('body')[0].style.overflow[1]='auto';
+      popup.classList.remove('modal-error');
     }
   }
 });
@@ -115,8 +115,8 @@ function setCursorPosition(pos, elem) {
   else if (elem.createTextRange) {
     var range = elem.createTextRange();
     range.collapse(true);
-    range.moveEnd("character", pos);
-    range.moveStart("character", pos);
+    range.moveEnd('character', pos);
+    range.moveStart('character', pos);
     range.select()
   }
 };
@@ -132,21 +132,35 @@ function mask(evt) {
     return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
   });
 
-  if (evt.type == "blur") {
+  if (evt.type == 'blur') {
     if (this.value.length == 2) this.value = ""
   } else setCursorPosition(this.value.length, this)
 };
 
-phone.addEventListener("input", mask);
-phone.addEventListener("focus", mask);
-phone.addEventListener("blur", mask);
+var onCheck = function () {
+  if (userPhoneInput.validity.tooShort) {
+    userPhoneInput.setCustomValidity('Номер должен состоять из 10-ти символов');
+  } else if (userPhoneInput.validity.tooLong) {
+    userPhoneInput.setCustomValidity('Номер должен состоять из 10-ти символов');
+  } else if (userPhoneInput.validity.valueMissing) {
+    userPhoneInput.setCustomValidity('Обязательное поле');
+  } else {
+    userPhoneInput.setCustomValidity('');
+  }
+};
+
+phone.addEventListener('input', mask);
+phone.addEventListener('focus', mask);
+phone.addEventListener('blur', mask);
+phone.addEventListener('invalid', onCheck);
 
 var feedback = document.querySelector('.feedback-form');
 var phoneUser = feedback.querySelector('input[name="phone"]');
 
-phoneUser.addEventListener("input", mask);
-phoneUser.addEventListener("focus", mask);
-phoneUser.addEventListener("blur", mask);
+phoneUser.addEventListener('input', mask);
+phoneUser.addEventListener('focus', mask);
+phoneUser.addEventListener('blur', mask);
+phoneUser.addEventListener('invalid', onCheck);
 
 function scrollTo(evt) {
   evt.preventDefault();
@@ -161,5 +175,5 @@ function scrollTo(evt) {
 var anchorFeedback = document.querySelector('.scroll-to-feedback');
 var anchorAdvantages = document.querySelector('.scroll-to-advantages');
 
-anchorFeedback.addEventListener("click", scrollTo);
-anchorAdvantages.addEventListener("click", scrollTo);
+anchorFeedback.addEventListener('click', scrollTo);
+anchorAdvantages.addEventListener('click', scrollTo);
