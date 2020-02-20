@@ -116,11 +116,11 @@
             <div class="feedback-form__wrapper">
               <p class="feedback-item">
                 <label class="visually-hidden" for="user-name">Имя</label>
-                <input id="user-name" type="text" name="name" placeholder="Имя" oninput="onTestPhoneUser()" required="">
+                <input id="user-name" type="text" name="name" placeholder="Имя" required="">
               </p>
               <p class="feedback-item">
                 <label class="visually-hidden" for="user-phone">Телефон</label>
-                <input id="user-phone" type="tel" name="phone" placeholder="Телефон" minlength="17" maxlength="17" required="">
+                <input id="user-phone" type="tel" name="phone" placeholder="Телефон" oninput="onTestPhoneUser()" required="">
               </p>
             </div>
             <p class="feedback-item">
@@ -210,13 +210,13 @@
       </p>
       <p class="modal-item">
         <label class="visually-hidden" for="modal-phone">Телефон</label>
-        <input id="modal-phone" type="tel" name="phone" placeholder="Телефон" required="">
+        <input id="modal-phone" type="tel" name="phone" placeholder="Телефон" oninput="onTestPhone()" required="">
       </p>
       <p class="modal-item">
         <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
         <textarea id="modal-question" name="question" rows="10" placeholder="Ваш вопрос" required=""></textarea>
       </p>
-      <button class="modal__button button button--modal" id="submit-feedback-modal" onclick="return testPhone();">Отправить</button>
+      <button class="modal__button button button--modal" id="submit-feedback-modal">Отправить</button>
       <p class="modal-item modal-item--checkbox">
         <input class="visually-hidden visually-hidden--checheckbox" type="checkbox" id="modal-consent" name="consent" checked="" required="">
         <!--onchange="document.getElementById('submit-feedback-modal').disabled = !this.checked;"-->

@@ -97,13 +97,11 @@ form.addEventListener('submit', function (evt) {
   }
 });
 
-function testPhone() {
+function onTestPhone() {
   if (phone.value.length < 17) {
     phone.setCustomValidity('Номер должен состоять из 10-ти цифр');
-    return false;
   } else {
     phone.setCustomValidity('');
-    return true;
   }
 };
 
@@ -166,10 +164,8 @@ phoneUser.addEventListener('blur', mask);
 function onTestPhoneUser() {
   if (phoneUser.value.length < 17) {
     phoneUser.setCustomValidity('Номер должен состоять из 10-ти цифр');
-    //return false;
   } else {
     phoneUser.setCustomValidity('');
-    //return true;
   }
 };
 
