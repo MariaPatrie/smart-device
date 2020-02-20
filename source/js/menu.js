@@ -134,11 +134,11 @@ function mask(evt) {
 
   if (evt.type == 'blur') {
     if (this.value.length == 2) this.value = "";
-    if (this.value.length < 18) {
+    if (this.value.length < 17) {
       this.setCustomValidity('Номер должен состоять из 10-ти цифр');
       this.focus;
     } else {
-      userNameInput.setCustomValidity('');
+      this.setCustomValidity('');
     }
   } else setCursorPosition(this.value.length, this)
 };

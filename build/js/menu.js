@@ -133,26 +133,19 @@ function mask(evt) {
   });
 
   if (evt.type == 'blur') {
-    if (this.value.length == 2) this.value = ""
+    if (this.value.length == 2) this.value = "";
+    if (this.value.length < 18) {
+      this.setCustomValidity('Номер должен состоять из 10-ти цифр');
+      this.focus;
+    } else {
+      userNameInput.setCustomValidity('');
+    }
   } else setCursorPosition(this.value.length, this)
-};
-
-var onCheck = function () {
-  if (userPhoneInput.validity.tooShort) {
-    userPhoneInput.setCustomValidity('Номер должен состоять из 10-ти символов');
-  } else if (userPhoneInput.validity.tooLong) {
-    userPhoneInput.setCustomValidity('Номер должен состоять из 10-ти символов');
-  } else if (userPhoneInput.validity.valueMissing) {
-    userPhoneInput.setCustomValidity('Обязательное поле');
-  } else {
-    userPhoneInput.setCustomValidity('');
-  }
 };
 
 phone.addEventListener('input', mask);
 phone.addEventListener('focus', mask);
 phone.addEventListener('blur', mask);
-phone.addEventListener('invalid', onCheck);
 
 var feedback = document.querySelector('.feedback-form');
 var phoneUser = feedback.querySelector('input[name="phone"]');
@@ -160,7 +153,6 @@ var phoneUser = feedback.querySelector('input[name="phone"]');
 phoneUser.addEventListener('input', mask);
 phoneUser.addEventListener('focus', mask);
 phoneUser.addEventListener('blur', mask);
-phoneUser.addEventListener('invalid', onCheck);
 
 function scrollTo(evt) {
   evt.preventDefault();
