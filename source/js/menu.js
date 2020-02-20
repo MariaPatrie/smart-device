@@ -163,13 +163,13 @@ phoneUser.addEventListener('input', mask);
 phoneUser.addEventListener('focus', mask);
 phoneUser.addEventListener('blur', mask);
 
-function testPhoneUser() {
+function onTestPhoneUser() {
   if (phoneUser.value.length < 17) {
     phoneUser.setCustomValidity('Номер должен состоять из 10-ти цифр');
-    return false;
+    //return false;
   } else {
     phoneUser.setCustomValidity('');
-    return true;
+    //return true;
   }
 };
 
