@@ -80,10 +80,14 @@
   }
 
   .main-screen__page-description {
+    position: relative;
+    z-index: 1;
     margin-bottom: 56px;
   }
 
   .main-screen__button {
+    position: relative;
+    z-index: 1;
     margin-left: 49px;
   }
 
@@ -112,6 +116,7 @@
       background-repeat: no-repeat;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        height: 560px;
         background-image: url("../img/background-mobile-img@2x.png");
       }
     }

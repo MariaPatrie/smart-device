@@ -1,4 +1,5 @@
 .feedback-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -92,6 +93,11 @@
 
 .feedback-form__wrapper .feedback-item {
   width: 47%;
+}
+
+
+.feedback-item--checkbox input {
+  width: 1px;
 }
 
 @media (max-width: $tablet-width) {

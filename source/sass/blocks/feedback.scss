@@ -1,7 +1,7 @@
 .feedback {
   background-color: $color-blue;
   @include background("../img/background-desktop-feedback-img.png");
-  background-position: 18% -60px;
+  background-position: top -60px right 38%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/background-desktop-feedback-img@2x.png");
