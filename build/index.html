@@ -128,7 +128,7 @@
               <textarea id="user-question" name="question" rows="10" placeholder="Ваш вопрос" required=""></textarea>
             </p>
             <div class="feedback-form__wrapper">
-              <button class="feedback__button button button--feedback" id="submit-feedback">Задать вопрос</button>
+              <button class="feedback__button button button--feedback" id="submit-feedback" onclick="onTestPhoneUser()">Задать вопрос</button>
               <p class="feedback-item feedback-item--checkbox">
                 <input class="visually-hidden visually-hidden--checheckbox" type="checkbox" id="consent" name="consent" checked="" required="">
                 <label for="consent">Я согласен на обработку персональных данных</label>
@@ -216,7 +216,7 @@
         <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
         <textarea id="modal-question" name="question" rows="10" placeholder="Ваш вопрос" required=""></textarea>
       </p>
-      <button class="modal__button button button--modal" id="submit-feedback-modal">Отправить</button>
+      <button class="modal__button button button--modal" id="submit-feedback-modal" onclick="onTestPhone()">Отправить</button>
       <p class="modal-item modal-item--checkbox">
         <input class="visually-hidden visually-hidden--checheckbox" type="checkbox" id="modal-consent" name="consent" checked="" required="">
         <!--onchange="document.getElementById('submit-feedback-modal').disabled = !this.checked;"-->

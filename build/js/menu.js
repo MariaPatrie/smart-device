@@ -54,7 +54,7 @@ link.addEventListener('click', function (evt) {
   evt.preventDefault();
   overlay.classList.add('overlay-show');
   popup.classList.add('modal-show');
-  document.getElementsByTagName('body')[0].style.overflow='hidden';
+  document.getElementsByTagName('body')[0].style.overflowY='hidden';
 
   if (storage) {
     user.value = storage;
@@ -70,7 +70,7 @@ close.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.remove('modal-show');
   overlay.classList.remove('overlay-show');
-  document.getElementsByTagName('body')[0].style.overflow[1]='auto';
+  document.getElementsByTagName('body')[0].style.overflowY='auto';
   popup.classList.remove('modal-error');
 });
 
@@ -78,7 +78,7 @@ overlay.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.remove('modal-show');
   overlay.classList.remove('overlay-show');
-  document.getElementsByTagName('body')[0].style.overflow[1]='auto';
+  document.getElementsByTagName('body')[0].style.overflowY='auto';
   popup.classList.remove('modal-error');
 });
 
@@ -111,7 +111,7 @@ window.addEventListener('keydown', function (evt) {
     if (popup.classList.contains('modal-show')) {
       popup.classList.remove('modal-show');
       overlay.classList.remove('overlay-show');
-      document.getElementsByTagName('body')[0].style.overflow[1]='auto';
+      document.getElementsByTagName('body')[0].style.overflowY='auto';
       popup.classList.remove('modal-error');
     }
   }
