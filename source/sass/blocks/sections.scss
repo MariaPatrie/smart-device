@@ -90,14 +90,14 @@
   .sections--opened .sections__toggle-sections,
   .sections--opened .sections__toggle-contacts {
     background-image: url("../img/icon-menu-close.svg");
-    background-position: 50% 50%;
+    background-position: 100% 32px;
     background-repeat: no-repeat;
   }
 
   .sections--closed .sections__toggle-sections,
   .sections--closed .sections__toggle-contacts {
     background-image: url("../img/icon-menu-open.svg");
-    background-position: 50% 50%;
+    background-position: 100% 50%;
     background-repeat: no-repeat;
   }
 
@@ -105,13 +105,13 @@
   .sections__toggle-contacts {
     display: block;
     position: absolute;
-    top: 32px;
+    top: 0;
     right: 0;
     z-index: 2;
     display: block;
     padding: 0;
-    width: 20px;
-    height: 14px;
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: 0;
     outline: none;
